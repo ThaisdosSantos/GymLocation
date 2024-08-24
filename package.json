@@ -4,7 +4,8 @@
   "description": "Este portal é destinado ao público fitness, facilitando a busca por academias",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
