@@ -1,0 +1,41 @@
+<div id="top-container" class="container-fluid">
+    <h1 id="main-title" class="text-center">Encontre a Academia Perfeita para Suas Necessidades</h1>
+    <p id="main-subtitle" class="text-center">
+        Seu ponto de encontro para encontrar todas as academias em um só lugar
+    </p>
+    <form id="search-form" class="form-inline row g-0" method="get" action="/">
+        <div class="col-md-10">
+            <input type="text" class="form-control w-80" id="gym" name="gym" placeholder="Informe o tipo de plano">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary w-80" id="submit">Procurar</button>
+        </div>
+    </form>
+</div>
+
+<main>
+    <div id="gyms-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{#if search}}
+                <h2 id="gym-list-title">Buscando academia que contém: {{search}}</h2>
+
+                {{else}}
+                <h2 id="gym-list-title">Veja as academias em destaque</h2>
+                {{/if}}
+                <ul id="gym-list" class="list-group">
+                    {{!-- loop com each --}}
+                    {{#each gyms}}
+                    <li class="list-group-item {{#if dataValues.new_gym}}new-gym{{/if}}">
+                        <img src="/imagens/image1.jpg" alt="Company">
+                        <p>{{dataValues.company}}</p>
+                        <h2>{{dataValues.title}}</h2>
+                        <p>R$ {{dataValues.price}}</p>
+                        <span class="new-gym-label">Nova</span>
+                        <a class="btn btn-primary" href="/gyms/view/{{dataValues.id}}">Ver academia</a>
+                        {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>

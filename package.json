@@ -1,0 +1,25 @@
+{
+  "name": "gym_location",
+  "version": "1.0.0",
+  "description": "Este portal é destinado ao público fitness, facilitando a busca por academias",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fitness, musculação"
+  },
+  "author": "Thaís Lemos <thaisds2.aluno@unipampa.edu.br>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

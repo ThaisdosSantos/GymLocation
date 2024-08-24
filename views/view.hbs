@@ -1,0 +1,19 @@
+<div id="gym-view-container" class="container">
+    <div class="col-12 ">
+        <a class="back-link main-color top-0 start-0 m-3" href="/">Voltar</a>        <div id="img-container" class="col-md-12"></div>
+        {{!-- <img src="../public/imagens/image2.jpg" alt=""> --}}
+    </div>
+    <div class="col-md-12">
+        <img src="/imagens/image1.jpg" alt="Company">
+        <h2 class="bold">Tipo de plano: </h2>
+        <p class="main-color">{{gym.dataValues.title}}</p>
+        <p class="bold">Descrição: </p>
+
+        <p class="gym-des main-color">{{gym.dataValues.description}}</p>
+        <p class="bold">O valor é R$:  <br><span class="bold main-color " >{{gym.dataValues.price}}</span></p><br>
+        <p>
+            Para mais informações na <span class="bold main-color">{{gym.dataValues.company}}</span>
+            Enviei um e-mail para a: <a class="main-color"
+                href="mail:to{{gym.dataValues.email}}">{{gym.dataValues.email}}</a><br>
+        </p>
+</div>
